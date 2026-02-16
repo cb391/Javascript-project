@@ -1,0 +1,120 @@
+.wrapper {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
+grid-auto-rows: minmax(100px, auto);
+
+}
+
+.two {
+grid-column: 1/4;
+grid-row: 1;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+text-align: center;
+background-color: antiquewhite;
+height: 100%;
+}
+
+li {
+display: inline-block;
+font-style: normal;
+font-size: xx-large;
+padding: 50px;
+}
+
+.three {
+grid-column: 1/4;
+grid-row: 2;
+justify-content: center;
+text-align: center;
+}
+
+.four {
+grid-column: 1/4;
+text-align: center;
+grid-row: 4;
+background-color: antiquewhite;
+}
+
+#feed-container {
+grid-column: 1/4;
+grid-row: 5/7;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
+grid-auto-rows: minmax(100px, auto);
+
+text-align: center;
+
+}
+
+footer {
+grid-column: 1/4;
+grid-row: 7;
+text-align: center;
+background-color: antiquewhite;
+}
+
+h1 {
+font-family: "Chewy", system-ui;
+font-weight: 400;
+font-style: normal;
+font-size: 900%;
+color: rgb(77, 61, 26);
+}
+
+h2 {
+font-family: "Chewy", system-ui;
+font-weight: 400;
+font-style: normal;
+font-size: xx-large;
+color: rgb(77, 61, 26);
+}
+
+p {
+font-family: "Finger Paint", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: rgb(77, 61, 26);
+line-height: 35px;
+}
+
+a {
+font-family: "Finger Paint", sans-serif;
+font-weight: 400;
+font-style: normal;
+text-decoration: none;
+color: rgb(77, 61, 26);
+}
+
+#imageCodeCafe {
+height: 60%;
+width:90%;
+}
+
+#salle4pers {
+height: 100%;
+width:100%;
+}
+
+#logoCodeCafe {
+  height: 100%;
+  width: 6%;
+}
+
+#monEspaceClient {
+  height: 30%;
+  width: 15%;
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(77, 61, 26);
+}
+
+.styleimage {
+  height: 40vh;
+  width: 50vh;
+}
