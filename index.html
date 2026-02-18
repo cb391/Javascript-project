@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
-<script src="/app.js" defer></script>
+<script src="app.js" defer></script>
 
 </head>
 
@@ -29,48 +29,116 @@
 
   <div class="two">
     <img id="logoCodeCafe" src="/images/logoCodeCafe.png" alt="logoCodeCafe">
-    <ul>
-      <li><a href="default.asp">Notre Agenda</a></li>
-      <li><a href="news.asp">Accueil</a></li>
-      <li><a href="contact.asp">Nos Activités</a></li>
-    </ul>
+
+
+    <div class="dropdown">
+
+      <button onclick="menuDeroulant()" class="dropbtn">Dropdown</button>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#accueil">Accueil</a>
+        <a href="#reserver">Réserver une salle</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+
   <button id="monEspaceClient"> Mon espace client</button>
   </div>
 
 
-  <div class="three">
+  <div class="three" id="accueil">
     <h1>Le Code Café</h1>
     <h2>Espace de coworking</h2>
     <img class="imageCafe" src="/images/LeCodeCafe.png" alt="imageCodeCafe" id="imageCodeCafe">
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa velit ea quisquam cum debitis consequatur facere harum soluta dolorem incidunt? Cumque non placeat est ipsum minus inventore quos magni dolorum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam beatae, modi commodi consequatur autem distinctio maxime alias ratione deleniti expedita, dolorem, pariatur laudantium dolorum animi ipsam     
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam beatae, modi commodi consequatur autem distinctio maxime alias ratione deleniti expedita, dolorem, pariatur laudantium dolorum animi ipsam
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam beatae, modi commodi consequatur autem distinctio maxime alias ratione deleniti expedita, dolorem, pariatur laudantium dolorum animi ipsam
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam beatae, modi commodi consequatur autem distinctio maxime alias ratione deleniti expedita, dolorem, pariatur laudantium dolorum animi ipsam  </p>
   </div>
 
 
-  <div class="four">
+  <div class="four" id="reserver">
     <h2> Réserver nos salles</h2>
   </div>
 
+    <div id="feed-container">    </div>
 
-    <div id="feed-container">
+
+  <div class="galerie" id="galerie">
+
+    <h2>Galerie photos</h2>
+
+    <div class="boutons">
+      <button id="btnGrid">Mosaïque</button>
+      <button id="btnColumn">Colonne</button>
+      <button id="btnAdd">Ajouter photo</button>
+      <button id="btnRemove">Supprimer photo</button>
+    </div>
+
+    <div id="galerie-container">    </div>
+
+  </div>
 
 
+  <footer id="contact">
+<h2>Contact</h2>
+<br>
+  <form name="form1" method="POST" id="contactform">
+
+    <input type="text" name="nom" placeholder="Nom">
+    <br>
+    <input type="text" name="prenom" placeholder="Prénom">
+    <br>
+    <input type="text" name="mail" placeholder="Mail">
+    <br>
+    <input type="tel" name="telephone" placeholder="ex: 06 12 79 53 89">
+    <br>     <br>
+
+    <!-- question 1 choix -->
+    <div id="block_choix">
+      <label>Vous souhaitez: </label>
+      <br>
+      <input type="radio" name="site" value="Salle"
+             onchange="aff_salle('oui'); aff_autre('non')" />
+      <label class="label-radio">Réserver une salle</label><br/>
+
+      <input type="radio" name="site" value="Autre"
+             onchange="aff_salle('non'); aff_autre('oui')" />
+      <label class="label-radio">Autre</label><br/><br/>
 
     </div>
 
+    <!-- question 2 si réponse si salle -->
+    <div id="block_salle">
+      <label>Quelle salle souhaitez-vous reserver ?</label>
+      <br>
+      <input type="radio" name="salle" value="Salle_1"/><label class="label-radio">Salle Réunion 1</label>
+      <br/>
+      <input type="radio" name="salle" value="Salle_2"/><label class="label-radio">Salle Réunion 2</label>
+      <br />
+      <input type="radio" name="salle" value="Salle_3"/><label class="label-radio">Salle Réunion 3</label>
+      <br>     <br>
+    </div>
 
-<footer>
-<h2>Contact</h2>
+    <!-- question 2 si réponse autre -->
+    <div id="block_autre">
+      <label><div class="qg-label-questions">Vous souhaitez des renseignements sur:</div></label>
+      <br>
+        <input type="radio" class="option-input radio" name="autre" value="activites" /><label class="label-radio">Nos activités</label>
+        <br />
+        <input type="radio" class="option-input radio" name="autre" value="contact" /><label class="label-radio">Autre</label>
+        <br/><br/>
+      </div>
+
+    <textarea rows="2" cols="15" name="champ3">Votre demande</textarea>
+    <br>     <br>
+
+    <input type="submit" value="Envoyer">
+  </form>
+
 </footer>
 
 
 
-
 </div>
-
 </body>
-
 </html>
